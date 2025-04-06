@@ -31,6 +31,9 @@ CLUSTER_API torch::Tensor nearest(torch::Tensor x, torch::Tensor y, torch::Tenso
 CLUSTER_API torch::Tensor radius(torch::Tensor x, torch::Tensor y, torch::Tensor ptr_x,
                      torch::Tensor ptr_y, double r, int64_t max_num_neighbors);
 
+CLUSTER_API torch::Tensor radius_resample(torch::Tensor x, torch::Tensor y, torch::Tensor ptr_x,
+    torch::Tensor ptr_y, double r, int64_t max_num_neighbors);
+
 CLUSTER_API std::tuple<torch::Tensor, torch::Tensor>
 random_walk(torch::Tensor rowptr, torch::Tensor col, torch::Tensor start,
             int64_t walk_length, double p, double q);

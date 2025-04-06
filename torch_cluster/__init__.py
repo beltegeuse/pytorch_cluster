@@ -7,7 +7,7 @@ __version__ = '1.6.3'
 
 for library in [
         '_version', '_grid', '_graclus', '_fps', '_rw', '_sampler', '_nearest',
-        '_knn', '_radius'
+        '_knn', '_radius', '_radius_resample'
 ]:
     cuda_spec = importlib.machinery.PathFinder().find_spec(
         f'{library}_cuda', [osp.dirname(__file__)])
@@ -41,7 +41,7 @@ from .graclus import graclus_cluster  # noqa
 from .grid import grid_cluster  # noqa
 from .knn import knn, knn_graph  # noqa
 from .nearest import nearest  # noqa
-from .radius import radius, radius_graph  # noqa
+from .radius import radius, radius_graph, radius_resample  # noqa
 from .rw import random_walk  # noqa
 from .sampler import neighbor_sampler  # noqa
 
@@ -53,6 +53,7 @@ __all__ = [
     'knn',
     'knn_graph',
     'radius',
+    'radius_resample',
     'radius_graph',
     'random_walk',
     'neighbor_sampler',

@@ -82,6 +82,7 @@ if(WITH_CUDA)
     csrc/cuda/knn_cuda.h
     csrc/cuda/nearest_cuda.h
     csrc/cuda/radius_cuda.h
+    csrc/cuda/radus_resample_cuda.h
     csrc/cuda/rw_cuda.h
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}/cuda)
 endif()
